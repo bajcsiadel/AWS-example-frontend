@@ -1,0 +1,24 @@
+@import "tailwindcss" prefix(tw);
+@import "tailwindcss-primeui";
+
+@custom-variant dark (&:where(.dark-theme, .dark-theme *));
+
+@theme {
+    --font-sans: "Inter", system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+
+    * {
+        transition: all;
+        transition-duration: 300ms;
+    }
+  }
+}
+
+.container {
+    @apply tw:mx-auto tw:max-w-lg tw:sm:max-w-lg tw:md:max-w-2xl tw:lg:max-w-4xl tw:xl:max-w-6xl;
+    @apply tw:w-full tw:px-4;
+}

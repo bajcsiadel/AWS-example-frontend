@@ -1,0 +1,7 @@
+.p-component.p-toggleswitch {
+    --p-toggleswitch-background: var(--tw-color-gray-700);
+    --p-toggleswitch-hover-background: var(--tw-color-gray-600);
+
+    --p-toggleswitch-checked-background: var(--tw-color-green-300);
+    --p-toggleswitch-checked-hover-background: var(--tw-color-green-200);
+}

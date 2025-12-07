@@ -1,0 +1,7 @@
+@import "./fontawesome.css";
+@import "./prime.css";
+@import "./tailwind.css";
+
+.erase-icon {
+    @apply tw:hover:cursor-pointer tw:hover:text-red-500 tw:dark:hover:text-red-800;
+}
