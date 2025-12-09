@@ -12,6 +12,10 @@ export default defineNuxtConfig({
   ],
   app: {
     head: {
+      title: "AWS exercise",
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.webp' }
+      ],
       script: [
         {
           src: "https://kit.fontawesome.com/092629ea56.js",

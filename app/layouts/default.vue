@@ -15,7 +15,11 @@ function toggleDarkMode() {
     <div class="tw:h-screen tw:flex tw:flex-col tw:justify-between tw:bg-white tw:dark:bg-green-700">
         <nav id="navigation-bar" class="tw:bg-green-400 tw:py-5 tw:shadow-md tw:dark:bg-green-950">
           <div class="tw:flex tw:justify-between container">
-            <router-link to="/" class="tw:text-2xl tw:text-black tw:dark:text-green-400 tw:hover:cursor-pointer tw:hover:underline tw:transition-all">My TODO list</router-link>
+            <router-link to="/" class="tw:text-2xl tw:text-black tw:dark:text-green-400 tw:hover:cursor-pointer tw:hover:underline tw:transition-all">AWS exercise</router-link>
+            <div class="tw:flex tw:gap-x-4">
+              <router-link to="/" class="tw:text-black tw:dark:text-green-400 tw:hover:cursor-pointer tw:hover:underline tw:transition-all">About</router-link>
+              <router-link to="todo-list" class="tw:text-black tw:dark:text-green-400 tw:hover:cursor-pointer tw:hover:underline tw:transition-all">TODO list</router-link>
+            </div>
             <div class="tw:flex tw:flex-nowrap tw:items-center tw:justify-center tw:gap-x-1">
               <i class="fa-solid fa-moon tw:text-black tw:dark:text-green-400"></i>
               <prime-toggle-switch @change="toggleDarkMode" :default-value="!isDark" />

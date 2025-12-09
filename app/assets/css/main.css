@@ -5,3 +5,17 @@
 .erase-icon {
     @apply tw:hover:cursor-pointer tw:hover:text-red-500 tw:dark:hover:text-red-800;
 }
+
+h1 {
+    @apply tw:text-3xl tw:font-extrabold;
+    @apply tw:py-4;
+}
+
+h2 {
+    @apply tw:text-2xl tw:font-extrabold;
+    @apply tw:py-3;
+}
+
+h3 {
+    @apply tw:text-xl tw:font-bold;
+}
