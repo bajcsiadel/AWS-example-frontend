@@ -22,7 +22,7 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
-      API_URL: `${process.env.API_HOST}:${process.env.API_PORT}`
+      API_URL: `${process.env.API_HOST}`
     }
   },
   css: ['@/assets/css/main.css'],
