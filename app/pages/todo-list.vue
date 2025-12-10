@@ -52,7 +52,7 @@ function removeItem(toRemove: TodoItem) {
 // database calls
 function postNewItem(value: string) {
     Promise.resolve(axios.post(
-        `${config.public.API_URL}/todo`,
+        `${config.public.API_URL}/api/todos`,
         {
             value,
             selected: false
@@ -66,7 +66,7 @@ function postNewItem(value: string) {
 
 function updateItem(todoItem: TodoItem) {
     Promise.resolve(axios.post(
-        `${config.public.API_URL}/todo/${todoItem.id}`,
+        `${config.public.API_URL}/api/todos/${todoItem.id}`,
         todoItem
     )).then((response: AxiosResponse<TodoItem[]>) => {
         fetchTodoItems();
@@ -77,7 +77,7 @@ function updateItem(todoItem: TodoItem) {
 
 function deleteItem(toRemove: number) {
     Promise.resolve(axios.delete(
-        `${config.public.API_URL}/todo/${toRemove}`
+        `${config.public.API_URL}/api/todos/${toRemove}`
     )).then((response: AxiosResponse<TodoItem[]>) => {
         fetchTodoItems();
     }).catch((error: AxiosError) => {
@@ -86,7 +86,7 @@ function deleteItem(toRemove: number) {
 } 
 
 function fetchTodoItems() {
-    Promise.resolve(axios.get(`${config.public.API_URL}/todo`))
+    Promise.resolve(axios.get(`${config.public.API_URL}/api/todos`))
         .then((response: AxiosResponse<TodoItem[]>) => {
             todoItems.value = response.data;
         }).catch((error: AxiosError) => {
