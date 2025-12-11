@@ -8,7 +8,6 @@ interface TodoItem {
     selected: boolean
 }
 const todoItems: Ref<TodoItem[]> = ref([]);
-const config = useRuntimeConfig()
 
 /* computed */
 const selectedValues: ComputedRef<string[]> = computed(() => todoItems.value

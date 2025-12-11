@@ -1,9 +1,11 @@
 <script setup lang="ts">
+const config = useRuntimeConfig();
 
+const S3_URL = config.public.S3_URL;
 </script>
 
 <template>
-    <img src="https://ab-tf-test-demo-bucket.s3.ap-northeast-1.amazonaws.com/assets/images/aws.webp" alt="AWS logo" class="tw:w-2xs tw:float-left tw:mr-4 tw:mb-2 tw:h-auto" />
+    <img :src="`${S3_URL}/assets/images/aws.webp`" alt="AWS logo" class="tw:w-2xs tw:float-left tw:mr-4 tw:mb-2 tw:h-auto" />
     <header>
         <h1>AWS Training Project</h1>
     </header>

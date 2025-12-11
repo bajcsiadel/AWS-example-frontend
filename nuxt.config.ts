@@ -26,7 +26,8 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
-      API_URL: `${process.env.API_HOST}:${process.env.API_PORT}`
+      API_URL: `${process.env.API_HOST}:${process.env.API_PORT}`,
+      S3_URL: `${process.env.S3_URL}`
     }
   },
   css: ['@/assets/css/main.css'],
